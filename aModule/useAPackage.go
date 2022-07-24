@@ -1,7 +1,7 @@
 package main
 
 import (
-  "github.com/darth001/aPackage/aPackage"
+  "github.com/darth001/mastering-go/aModule/aPackage"
   "fmt"
 )
 
