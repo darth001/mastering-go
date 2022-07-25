@@ -6,7 +6,11 @@ import (
 )
 
 func writeToChannel(c chan int, x int) {
+<<<<<<< HEAD
   fmt.Println("1:", x)
+=======
+  fmt.Println(x)
+>>>>>>> 768b8922f6870546fc7950feeca70cfc3946b032
   c <- x
   close(c)
   fmt.Println("2:", x)
