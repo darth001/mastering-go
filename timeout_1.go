@@ -30,7 +30,7 @@ func main() {
   select {
   case res := <-c2:
     fmt.Println(res)
-    case <-time.After(4 * time.Second):
-      fmt.Println("c2 timeout")
+  case <-time.After(4 * time.Second):
+    fmt.Println("c2 timeout")
   }
 }
