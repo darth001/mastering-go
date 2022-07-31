@@ -29,7 +29,7 @@ func main() {
       k[i] = i // race condition 1
     }()
   }
-  k[2] = 10
+  k[2] = 10 // race condition 2
   wg.Wait()
   fmt.Printf("k = %#v\n", k)
 }
