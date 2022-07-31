@@ -7,6 +7,8 @@ import (
   "sync"
 )
 
+var mu sync.Mutex
+
 func main() {
   arguments := os.Args
   if len(arguments) != 2 {
@@ -26,7 +28,9 @@ func main() {
     wg.Add(1)
     go func() {
       defer wg.Done()
+      mu.Lock()
       k[i] = i // race condition 1
+      mu.Unlock()
     }()
   }
   k[2] = 10 // race condition 2
