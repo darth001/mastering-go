@@ -26,7 +26,7 @@ func main() {
     wg.Add(1)
     go func() {
       defer wg.Done()
-      k[i] = i
+      k[i] = i // race condition 1
     }()
   }
   k[2] = 10
