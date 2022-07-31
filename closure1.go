@@ -7,6 +7,7 @@ import (
 
 func main() {
   for i := 0; i <= 20; i++ {
+    i := i
     go func() {
       fmt.Print(i)
     }()
