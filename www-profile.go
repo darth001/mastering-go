@@ -39,7 +39,11 @@ func main() {
   r.HandleFunc("/debug/pprof/", pprof.Index)
   r.HandleFunc("/debug/pprof/cmdline", pprof.Cmdline)
   r.HandleFunc("/debug/pprof/profile", pprof.Profile)
+<<<<<<< HEAD
   r.HandleFunc("/debug/pprof/symbox", pprof.Symbol)
+=======
+  r.HandleFunc("/debug/pprof/symbox", pprof.Symbox)
+>>>>>>> 2e0e20b875d167604db7c27a4f73b352b73849fb
   r.HandleFunc("/debug/pprof/trace", pprof.Trace)
 
   err := http.ListenAndServe(PORT, r)
